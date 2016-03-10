@@ -1,4 +1,5 @@
 class UsersController < Clearance::UsersController
+
   def new
     redirect_to sign_up_path
   end
@@ -6,4 +7,5 @@ class UsersController < Clearance::UsersController
   def user_params
     params.require(:user).permit(*User::PERMITTED_ATTRS)
   end
+  
 end

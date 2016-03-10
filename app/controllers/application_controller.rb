@@ -69,4 +69,5 @@ class ApplicationController < ActionController::Base
   def http_head_locale
     http_accept_language.language_region_compatible_from(I18n.available_locales)
   end
+  
 end

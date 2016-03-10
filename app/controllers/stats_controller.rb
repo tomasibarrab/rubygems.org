@@ -1,4 +1,5 @@
 class StatsController < ApplicationController
+
   def index
     @number_of_gems      = Rubygem.total_count
     @number_of_users     = User.count
@@ -6,4 +7,5 @@ class StatsController < ApplicationController
     @most_downloaded     = Rubygem.downloaded(10).sort_by(&:downloads).reverse!
     @most_downloaded_count = @most_downloaded.first.downloads
   end
+
 end

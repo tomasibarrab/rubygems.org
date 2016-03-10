@@ -50,4 +50,5 @@ class RubygemsController < ApplicationController
   def params_linkset
     params.require(:linkset).permit(:code, :docs, :wiki, :mail, :bugs)
   end
+  
 end

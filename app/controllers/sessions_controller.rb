@@ -1,4 +1,5 @@
 class SessionsController < Clearance::SessionsController
+  
   def create
     params.require(:session)
     @user = User.authenticate(
@@ -22,4 +23,5 @@ class SessionsController < Clearance::SessionsController
   def url_after_create
     dashboard_url
   end
+
 end
